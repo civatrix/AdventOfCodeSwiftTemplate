@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "B4CDD3DB-F0F9-4F52-BA4B-E22D70A2CB68",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "commandLineArgumentEntries" : [
+
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AdventOfCode.xcodeproj",
+      "identifier" : "B93AB20D291C2A130032E7E9",
+      "name" : "AdventOfCode"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:AdventOfCode.xcodeproj",
+        "identifier" : "B93AB21F291C2DBB0032E7E9",
+        "name" : "AdventOfCodeTests"
+      }
+    }
+  ],
+  "version" : 1
+}
