@@ -21,11 +21,36 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
+      "skippedTests" : [
+        "Day10Tests",
+        "Day11Tests",
+        "Day12Tests",
+        "Day13Tests",
+        "Day14Tests",
+        "Day15Tests",
+        "Day16Tests",
+        "Day17Tests",
+        "Day18Tests",
+        "Day19Tests",
+        "Day1Tests",
+        "Day20Tests",
+        "Day21Tests",
+        "Day22Tests",
+        "Day23Tests",
+        "Day24Tests",
+        "Day2Tests",
+        "Day3Tests",
+        "Day4Tests",
+        "Day5Tests",
+        "Day6Tests",
+        "Day7Tests",
+        "Day8Tests",
+        "Day9Tests"
+      ],
       "target" : {
         "containerPath" : "container:AdventOfCode.xcodeproj",
-        "identifier" : "B93AB21F291C2DBB0032E7E9",
-        "name" : "AdventOfCodeTests"
+        "identifier" : "B93F1B3C293C0BC2008D5BD1",
+        "name" : "AdventOfCodeKitTests"
       }
     }
   ],

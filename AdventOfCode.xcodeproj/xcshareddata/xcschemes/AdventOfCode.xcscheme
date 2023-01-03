@@ -46,6 +46,16 @@
                ReferencedContainer = "container:AdventOfCode.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B93AB21F291C2DBB0032E7E9"
+               BuildableName = "AdventOfCodeTests.xctest"
+               BlueprintName = "AdventOfCodeTests"
+               ReferencedContainer = "container:AdventOfCode.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -75,11 +85,11 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-y 2020"
+            argument = "-y 2022"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-c session=53616c7465645f5fe89e0000d454e60af304b671dce75c441f58ee80fb20b6e3df128622ed0ac648466a5bece092a0cddb237f25d729b3ea301b917857f7d60c"
+            argument = "-c $(SESSION_COOKIE)"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
