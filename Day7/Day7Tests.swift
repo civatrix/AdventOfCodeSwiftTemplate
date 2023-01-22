@@ -11,7 +11,9 @@ final class Day7Tests: XCTestCase {
     let day = Day7()
     
     func testDay() throws {
-        let input = ""
+        let input =
+"""
+"""
         XCTAssertEqual(day.run(input: input), "")
     }
 }
