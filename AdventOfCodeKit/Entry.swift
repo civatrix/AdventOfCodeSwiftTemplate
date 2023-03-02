@@ -56,7 +56,7 @@ public func run(_ day: String, _ year: String?, _ cookie: String?) async {
     }
     
     print("Running day \(day)")
-    let result = dayClass.init().run(input: input)
+    let result = dayClass.init().run(input: input.trimmingCharacters(in: .newlines))
     print(result)
     NSPasteboard.general.clearContents()
     NSPasteboard.general.setString(result, forType: .string)
