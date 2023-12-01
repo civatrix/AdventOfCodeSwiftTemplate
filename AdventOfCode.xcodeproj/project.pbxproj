@@ -133,6 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B92CA2432B196E7500943067 /* AdventOfCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdventOfCode.entitlements; sourceTree = "<group>"; };
 		B93AB20E291C2A130032E7E9 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93AB211291C2A130032E7E9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B93AB219291C2CC70032E7E9 /* input */ = {isa = PBXFileReference; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
@@ -296,6 +297,7 @@
 		B93AB210291C2A130032E7E9 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				B92CA2432B196E7500943067 /* AdventOfCode.entitlements */,
 				B9584842295B7F6200B2A37C /* Secrets.example.xcconfig */,
 				B9584841295B716700B2A37C /* Secrets.xcconfig */,
 				B93AB211291C2A130032E7E9 /* main.swift */,
@@ -939,10 +941,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9584841295B716700B2A37C /* Secrets.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AdventOfCode/AdventOfCode.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -952,10 +956,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9584841295B716700B2A37C /* Secrets.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AdventOfCode/AdventOfCode.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
