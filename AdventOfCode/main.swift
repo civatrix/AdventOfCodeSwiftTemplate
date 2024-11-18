@@ -25,8 +25,4 @@ for (param, value) in arguments.adjacentPairs() {
     }
 }
 
-guard let day else {
-    fatalError("Missing day parameter")
-}
-
 await run(day, year, cookie)

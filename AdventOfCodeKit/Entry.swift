@@ -28,7 +28,12 @@ func downloadInput(for day: String, year: String, cookie: String) async -> Strin
     
     do {
         let response = try await URLSession.shared.data(for: request)
-        guard let httpResponse = response.1 as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+        guard let httpResponse = response.1 as? HTTPURLResponse else {
+            NSLog("Unknown response type: Expected HTTPURLResponse, got \(response.1.className)")
+            return nil
+        }
+        guard httpResponse.statusCode == 200 else {
+            NSLog("Unexpected status code: Expected 200, got \(httpResponse.statusCode)")
             return nil
         }
         let string = String(data: response.0, encoding: .utf8)
@@ -41,7 +46,15 @@ func downloadInput(for day: String, year: String, cookie: String) async -> Strin
     }
 }
 
-public func run(_ day: String, _ year: String?, _ cookie: String?) async {
+public func run(_ day: String?, _ year: String?, _ cookie: String?) async {
+    guard let day else {
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "EST")!
+        
+        let components = calendar.dateComponents([.day, .year], from: Date())
+        await run(components.day?.description, year ?? components.year?.description, cookie)
+        return
+    }
     let url = inputUrl(for: day)
     
     let input: String

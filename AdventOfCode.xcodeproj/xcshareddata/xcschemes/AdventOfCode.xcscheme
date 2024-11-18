@@ -82,11 +82,11 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "-d 1"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-y 2024"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-c $(SESSION_COOKIE)"

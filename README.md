@@ -7,14 +7,14 @@ Create a new repo using this a [template](https://github.com/civatrix/AdventOfCo
 # Use
 The tool takes 3 arguments detailed below. Input can either be copy-pasted into the correct `DayX/input` file or by suppling a year and cookie parameter for the tool to fetch your input for you. This will only happen if the `input` file for that day is empty, and will save the fetched input to that file so it won't make another request each time you run the tool. If you're not using the auto input fetching, remove the `-y` and `-c` parameters from the scheme.
 
-## -d (required)
-Identifies the day you want to run. Used to select the correct `DayX` folder to get both executable code and input data. You'll need to change this each day before starting the next challenge.
+## -d (optional)
+Identifies the day you want to run. Used to select the correct `DayX` folder to get both executable code and input data. If not provided, will use your system date adjusted to EST to get the current day. If provided, you'll need to change this each day before starting the next challenge.
 
 ## -y (optional)
-Identifies the year you want to run. Used only when dynamically fetching your input. Also requires `-c` parameter to function
+Identifies the year you want to run. Used only when dynamically fetching your input. Also requires `-c` parameter to function. If not provided, will use your system date adjusted to EST to get the current year
 
 ## -c (optional)
-The cookie value used to dynamically fetch your input. Used only when dynamically fetching your input. Also requires `-y` parameter to function.
+The cookie value used to dynamically fetch your input. Used only when dynamically fetching your input.
 
 You can retrieve this by opening any `input` file on the [Advent of Code](www.adventofcode.com) site and using the developer tools `Network` tool. Reload the page with the tool open, select `input` and copy the entire value of the `Cookie` header including `session=`.  Duplicate `/AdventOfCode/Secrets.example.xcconfig` and rename it to `/AdventOfCode/Secrets.xcconfig` then paste it after the `=` on the only line. The cookies seem to be good for 30 days so if you do this at the end of November, you shouldn't need to touch it again  
 
