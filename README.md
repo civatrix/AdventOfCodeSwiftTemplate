@@ -1,8 +1,8 @@
 # AdventOfCodeSwiftTemplate
-A template for completing [Advent of Code](www.adventofcode.com) challenges in Xcode using Swift. It's a CLI program with a template for each of the 25 days.
+A template for completing [Advent of Code](https://www.adventofcode.com) challenges in Xcode using Swift. It's a CLI program with a template for each of the 25 days.
 
 # Creation
-Create a new repo using this a [template](https://github.com/civatrix/AdventOfCodeSwiftTemplate/generate). Because CLI tools can't include nonexecutable files in their binary, the tool has to know the path to the project. This defaults to `~/Documents/AdventOfCode` but is easily changed on line 12 of `AdventOfCode/main.swift`. I'm assuming this will only ever be run from within Xcode to facilitate debugging so there is very little error handling for the execution harness. 
+Create a new repo using this a [template](https://github.com/civatrix/AdventOfCodeSwiftTemplate/generate). Because CLI tools can't include nonexecutable files in their binary, the tool has to know the path to the project. This defaults to `~/Documents/AdventOfCode` but is easily changed on line 11 of `AdventOfCodeKit/Entry.swift`. I'm assuming this will only ever be run from within Xcode to facilitate debugging so there is very little error handling for the execution harness. 
 
 # Use
 The tool takes 3 arguments detailed below. Input can either be copy-pasted into the correct `DayX/input` file or by suppling a year and cookie parameter for the tool to fetch your input for you. This will only happen if the `input` file for that day is empty, and will save the fetched input to that file so it won't make another request each time you run the tool. If you're not using the auto input fetching, remove the `-y` and `-c` parameters from the scheme.

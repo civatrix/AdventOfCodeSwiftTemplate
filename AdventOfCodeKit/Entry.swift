@@ -25,16 +25,20 @@ func downloadInput(for day: String, year: String, cookie: String) async -> Strin
     
     var request = URLRequest(url: url)
     request.addValue(cookie, forHTTPHeaderField: "Cookie")
-    guard let response = try? await URLSession.shared.data(for: request) else {
-        return nil
-    }
-    guard let httpResponse = response.1 as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-        return nil
-    }
-    let string = String(data: response.0, encoding: .utf8)
     
-    try? string?.write(to: inputUrl(for: day), atomically: true, encoding: .utf8)
-    return string
+    do {
+        let response = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response.1 as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            return nil
+        }
+        let string = String(data: response.0, encoding: .utf8)
+        
+        try string?.write(to: inputUrl(for: day), atomically: true, encoding: .utf8)
+        return string
+    } catch {
+        NSLog(error.localizedDescription)
+        return nil
+    }
 }
 
 public func run(_ day: String, _ year: String?, _ cookie: String?) async {
